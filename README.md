@@ -4,6 +4,36 @@ A full-stack web-based chat application designed to deliver a classic real-time 
 
 ---
 
+---
+
+#  Application Preview
+
+##  Main Chat UI
+![Main Chat](./screenshots/main-chat-page.png)
+
+##  Authentication
+![Login](./screenshots/login.png)
+![Register](./screenshots/register.png)
+
+##  Chat Experience
+![User1 Chat](./screenshots/user1-chat.png)
+![User2 Chat](./screenshots/user2-chat.png)
+
+##  Rooms
+![Group Created](./screenshots/group-chat-room-created.png)
+![Common Group](./screenshots/common-group-for-all.png)
+
+##  Friends System
+![Friend List](./screenshots/friend-list-section.png)
+![Send Friend Request](./screenshots/send-friend-request.png)
+
+##  Message Features
+![Edit Message](./screenshots/edit-message.png)
+![Edit Success](./screenshots/edit-message-suceess.png)
+![Deleted](./screenshots/deleted.png)
+
+---
+
 #  Features Overview
 
 ## 👤 User Accounts & Authentication
