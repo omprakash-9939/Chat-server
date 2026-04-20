@@ -53,16 +53,6 @@ export default function Sidebar({
               onCreateRoom(newName);
               setNewName("");
             }}
-            // onClick={() => {
-            //   if (!newName.trim()) {
-            //     toast.warning("Room name cannot be empty");
-            //     return;
-            //   }
-
-            //   onCreateRoom(newName);
-            //   toast.success("Room created");
-            //   setNewName("");
-            // }}
           >
             Add
           </button>
