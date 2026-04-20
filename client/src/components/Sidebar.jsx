@@ -85,16 +85,6 @@ export default function Sidebar({
               onJoinById(joinId);
               setJoinId("");
             }}
-            // onClick={() => {
-            //   if (!joinId.trim()) {
-            //     toast.warning("Please enter room ID");
-            //     return;
-            //   }
-
-            //   onJoinById(joinId);
-            //   toast.info("Joining room...");
-            //   setJoinId("");
-            // }}
           >
             Join
           </button>
@@ -104,11 +94,11 @@ export default function Sidebar({
       <div className="flex-1 min-h-0 overflow-y-auto border-t border-gray-700 pt-3 space-y-4">
         <div className="space-y-1">
           <p className="text-xs uppercase text-gray-400">Group chats</p>
+
           {grouped.groupRooms.map((room) => (
             <button
               type="button"
               key={room.id}
-              // onClick={() => onJoinRoom(room.id)}
               onClick={() => {
                 onJoinRoom(room.id);
                 toast.info(`Joining ${room.displayName}`);
@@ -116,7 +106,15 @@ export default function Sidebar({
               className="w-full text-left p-2 rounded hover:bg-gray-700 text-sm"
             >
               <span className="font-medium">{room.displayName}</span>
-              <span className="block text-xs text-gray-400 truncate">
+
+              <span
+                className="block text-xs text-gray-400 truncate cursor-pointer"
+                onClick={(e) => {
+                  e.stopPropagation(); // ❗ prevents triggering parent button click
+                  navigator.clipboard.writeText(room.id);
+                  toast.success("Copied room ID!");
+                }}
+              >
                 {room.id}
               </span>
             </button>
